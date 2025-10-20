@@ -219,7 +219,438 @@
   box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
+.card h3 {* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1,6;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar{
+    background-color: #ffc800;
+    color: #f0f0f0;
+    padding: 1rem 0;
+    
+}
+
+.navbar .logo{
+    list-style: none;
+    float: left;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    float: right;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color:#fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: white
+}
+
+.navbar::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    color: #333;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.footer{
+        background-color: #ffc800;
+        color: #fff;
+        text-align: center;
+        padding: 17px 0;
+        font-size: 20px;
+        box-sizing: border-box;
+        margin-top: 170px;
+    }
+
+.logo img {
+    height: 30px;
+    
+    /* Atur ukuran sesuai kebutuhan */
+}
+
+
+/* Profile Section */
+.vision-mission {
+    background: white;
+    padding: rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    content: none !important;
+    
+}
+
+.vm-item h3 {
+    color: #1e3c72;
+    margin-bottom: 1rem;
+}
+
+
+.visi{
+    color: #1e3c72;
+    text-align: center;
+}
+
+.vision-mission::before,
+.vision-mission::marker,
+.vm-item::before,
+.vm-item::marker {
+  content: none !important;
+}
+
+.about-image img {
+  width: 300%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+/* About Section */
+ .about-content {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+   align-items: center;
+        }
+.about-image {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.vision-mission {
+    margin-top: 40px;
+}
+
+.vm-item {
+    background-color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 70px;
+}
+
+.vm-item::before {
+    content: '\f19d';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--primary);
+}
+       
+.welcome {
+    text-align: center;
+    padding: 100px 20px;
+    background: #f3f7fc;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.welcome h2 span {
+    color: #007bff;
+    font-weight: bold;
+}
+.welcome p {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #555;
+}
+        
+.profile-pic img {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+               
+/* Keunggulan */
+.keunggulan {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff;
+}
+
+.keunggulan h2 {
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
 .card h3 {
+  color: #0077b6;
+  margin-bottom: 0.5rem;
+}
+
+
+  /* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:3rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    
+}
+
+.gallery-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+/* Gallery animasi dan pososi*/
+.gallery-item {
+  position: relative;
+  border-radius: 10PX;
+  overflow: hidden;
+  height: 250px;
+}
+
+.gallery-item img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: var(--transition);
+}
+
+.gallery-item:hover img {
+transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: var(--transition);
+ }
+
+.gallery-item:hover .gallery-overlay {
+transform: translateY(0);
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Map and Form */
+.map-form {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.map {
+    flex: 1 1 45%;
+}
+
+.contact-form {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+footer {
+  background-color: #f8f9fa;
+  padding: 40px 60px 10px 60px;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.school-name {
+  color: #0056d2;
+  font-weight: bold;
+}
+
+.footer-section h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Ikon Sosial Media */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+
+
   color: #0077b6;
   margin-bottom: 0.5rem;
 }
