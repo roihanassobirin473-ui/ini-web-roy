@@ -1,3 +1,86 @@
-.body {
-  background-color: ffff00;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1,6;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar{
+    background-color: #ffc800;
+    color: #f0f0f0;
+    padding: 1rem 0;
+    
+}
+
+.navbar .logo{
+    list-style: none;
+    float: left;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    float: right;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color:#fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: white
+}
+
+.navbar::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    color: #333;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.footer{
+        background-color: #ffc800;
+        color: #fff;
+        text-align: center;
+        padding: 17px 0;
+        font-size: 20px;
+        box-sizing: border-box;
+        margin-top: 170px;
+    }
+
+.logo img {
+    height: 30px;
+    
+    /* Atur ukuran sesuai kebutuhan */
+}
+
