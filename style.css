@@ -365,6 +365,20 @@ transform: translateY(0);
     background-color: #0056b3;
 }
 
+.contact-form button {
+    background: #25D366;        /* hijau WhatsApp */
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-form button:hover {
+    background: #128C7E;
+}
+
 
 footer {
   background-color: #f8f9fa;
