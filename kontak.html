@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SMKN 1 BLEGA</title>
     <link rel="stylesheet"href="style.css" />
     <link rel='website icon' type='png' href='LOGO PPLG.png'>
 </head>
@@ -45,41 +45,27 @@
                         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
     
-                <!-- FORM WHATSAPP BARU -->
-<div class="contact-form">
-    <input type="text" id="nama" placeholder="Your Name" required />
-    <input type="email" id="email" placeholder="Your Email" required />
-    <input type="text" id="subjek" placeholder="Subject" required />
-    <textarea id="pesan" placeholder="Message" rows="5" required></textarea>
-    
-    <button type="button" onclick="kirimWA()">Send Message via WhatsApp</button>
-</div>
-
-<script>
+                <script>
 function kirimWA() {
-    // Ambil nilai dari input
     const nama   = document.getElementById('nama').value;
     const email  = document.getElementById('email').value;
     const subjek = document.getElementById('subjek').value;
     const pesan  = document.getElementById('pesan').value;
 
-    // Validasi sederhana
     if (!nama || !email || !subjek || !pesan) {
-        alert('Mohon isi semua kolom dulu ya 😊');
+        alert('Isi semua kolom dulu ya 😊');
         return;
     }
 
-    // Nomor WA tujuan (ganti kalau mau nomor lain)
-    const nomorWA = "081958794091";   // tanpa + atau 0 di depan
+    // NOMOR YANG BENAR (62 + 816-2226-3453)
+    const nomorWA = "6281958794091";
 
-    // Teks yang dikirim
-    const teks = `*Pesan dari Website SMKN 1 Blega* %0A%0A` +
+    const teks = `*Pesan dari Website SMKN 1 Blega*%0A%0A` +
                  `*Nama:* ${nama}%0A` +
                  `*Email:* ${email}%0A` +
                  `*Subjek:* ${subjek}%0A%0A` +
                  `*Pesan:* %0A${pesan}`;
 
-    // Buka WhatsApp
     const url = `https://wa.me/${nomorWA}?text=${teks}`;
     window.open(url, '_blank');
 }
