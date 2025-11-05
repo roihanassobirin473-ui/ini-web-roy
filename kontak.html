@@ -48,6 +48,7 @@
                 <script>
 function kirimWA() {
     const nama   = document.getElementById('nama').value;
+    const email  = document.getElementById('email').value;
     const subjek = document.getElementById('subjek').value;
     const pesan  = document.getElementById('pesan').value;
 
@@ -61,6 +62,7 @@ function kirimWA() {
 
     const teks = `*Pesan dari Website SMKN 1 Blega*%0A%0A` +
                  `*Nama:* ${nama}%0A` +
+                 `*email:* ${email}%0A` +
                  `*Subjek:* ${subjek}%0A%0A` +
                  `*Pesan:* %0A${pesan}`;
 
